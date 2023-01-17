@@ -16,7 +16,7 @@ struct MainView: View {
         NavigationView {
             ZStack {
                 VStack(spacing: 15) {
-                    Text("List Notes")
+                    Text("Neon Notes")
                         .font(.title.bold())
                         .foregroundColor(.palette.child.opacity(0.6))
                         .shadow(color: .palette.child, radius: 3)

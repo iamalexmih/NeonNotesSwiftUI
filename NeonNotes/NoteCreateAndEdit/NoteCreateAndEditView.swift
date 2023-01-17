@@ -31,6 +31,8 @@ struct NoteCreateAndEditView: View {
             ToolbarItem(placement: .navigationBarLeading) {
                 buttonBack
                     .foregroundColor(.palette.child.opacity(0.7))
+                    .shadow(color: .palette.child.opacity(0.6), radius: 1)
+                    .animation(.easeInOut)
             }
             ToolbarItem(placement: .keyboard) {
                 Button {
@@ -62,10 +64,13 @@ extension NoteCreateAndEditView {
         } label: {
             HStack {
                 Image(systemName: "arrow.left")
+                    .shadow(color: .palette.child, radius: 3)
                 if viewModel.changeButtonBackText() {
                     Text("Back")
+                        .shadow(color: .palette.child, radius: 3)
                 } else {
                     Text("Save and Back")
+                        .shadow(color: .palette.child, radius: 3)
                 }
             }
         }
@@ -76,7 +81,7 @@ extension NoteCreateAndEditView {
         Button {
             dismiss()
         } label: {
-            Image(systemName: "arrow.down.circle")
+            Image(systemName: "arrow.down")
                 .font(.system(size: 30))
                 .shadow(color: .palette.child, radius: 3)
         }
